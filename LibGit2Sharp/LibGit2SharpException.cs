@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using LibGit2Sharp.Core;
 
 namespace LibGit2Sharp
 {
@@ -47,6 +48,15 @@ namespace LibGit2Sharp
         /// </summary>
         public LibGit2SharpException()
         {
+        }
+        
+        /// <summary>
+        ///   Initializes a new instance of the <see cref = "LibGit2SharpException" /> class.
+        /// </summary>
+        public LibGit2SharpException(GitErrorCode code, GitErrorCategory category, string message) : base(message)
+        {
+            Data["libgit2.code"] = code;
+            Data["libgit2.class"] = category;
         }
 
         /// <summary>
