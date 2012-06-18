@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using LibGit2Sharp.Core;
 
 namespace LibGit2Sharp
 {
@@ -48,7 +49,7 @@ namespace LibGit2Sharp
         public LibGit2SharpException()
         {
         }
-        
+
         /// <summary>
         ///   Initializes a new instance of the <see cref = "LibGit2SharpException" /> class.
         /// </summary>
